@@ -1,7 +1,8 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "jest": true
   },
   "extends": [
     "plugin:react/recommended",
@@ -18,15 +19,11 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": [
-    "react",
-    "@typescript-eslint",
-    "react-hooks",
-    "prettier"
-  ],
+  "plugins": ["react", "@typescript-eslint", "react-hooks", "prettier"],
   "rules": {
-    "no-console": 0,
-    "no-restricted-globals": "off",
+    "import/no-duplicates": "off",
+    "no-redeclare": "off",
+    "@typescript-eslint/no-empty-function": "off",
     "no-unused-vars": "off",
     "react/jsx-props-no-spreading": "off",
     "react/jsx-one-expression-per-line": "off",
@@ -36,15 +33,14 @@
     "react/jsx-filename-extension": [
       1,
       {
-        "extensions": [
-          ".tsx"
-        ]
+        "extensions": [".tsx"]
       }
     ],
     "import/prefer-default-export": "off",
     "camelcase": "off",
     "@typescript-eslint/ban-types": "off",
     "@typescript-eslint/no-use-before-define": "off",
+
     "no-use-before-define": "off",
     "prettier/prettier": "error",
     "import/extensions": [
@@ -58,7 +54,9 @@
   },
   "settings": {
     "import/resolver": {
-      "typescript": {}
+      "typescript": {
+        "editor.formatOnSave": true
+      }
     }
   }
 }
