@@ -18,9 +18,26 @@ export const HeaderContent = styled.div`
   > img {
     height: 80px;
   }
+`;
+
+export const Menu = styled.div`
+  max-width: 1120px;
+  margin: 0 auto;
+  margin-right: 0;
+  display: flex;
+
+  a {
+    margin-right: 30px;
+    text-decoration: none;
+    svg {
+      color: #999591;
+      width: 20px;
+      height: 20px;
+    }
+  }
 
   button {
-    margin-left: auto;
+    margin: 0 auto;
     background: transparent;
     border: 0;
 

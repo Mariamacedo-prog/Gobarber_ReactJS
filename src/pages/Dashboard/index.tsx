@@ -3,7 +3,7 @@ import { isToday, format, parseISO, isAfter } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
 import DayPicker, { DayModifiers } from 'react-day-picker';
 import 'react-day-picker/lib/style.css';
-import { FiPower, FiClock } from 'react-icons/fi';
+import { FiPower, FiClock, FiSearch } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import {
   Container,
@@ -16,6 +16,7 @@ import {
   Section,
   Appointment,
   Calendar,
+  Menu,
 } from './styles';
 import logoImg from '../../assets/logo.svg';
 import { useAuth } from '../../hooks/auth';
@@ -148,9 +149,14 @@ const Dashboard: React.FC = () => {
             </div>
           </Profile>
 
-          <button type="button" onClick={signOut}>
-            <FiPower />
-          </button>
+          <Menu>
+            <Link to="/providers">
+              <FiSearch />
+            </Link>
+            <button type="button" onClick={signOut}>
+              <FiPower />
+            </button>
+          </Menu>
         </HeaderContent>
       </Header>
 
